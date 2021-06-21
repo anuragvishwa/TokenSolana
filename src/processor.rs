@@ -40,7 +40,7 @@ impl Processor {
         program_id: &Pubkey,
     ) -> ProgramResult {
         let account_info_iter = &mut accounts.iter();
-        let initializer = next_account_info(account_info_iter)?;
+        let initializer = next_account_info(account_info_iter)?;  //Account 0
 
         if !initializer.is_signer {
             return Err(ProgramError::MissingRequiredSignature);
